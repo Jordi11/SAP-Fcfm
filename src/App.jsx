@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="Nav-Header">
-        <a href="#Nosotros">
+        <a href="#">
           <img src="logo.png"></img>
         </a>
         <div className="section">
