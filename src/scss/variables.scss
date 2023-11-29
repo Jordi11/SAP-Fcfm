@@ -1,0 +1,64 @@
+// Colors
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+
+// Background Colors
+$body-bg: #fff;
+$text-color: #212529;
+
+// Border Color
+$border-color: #dee2e6;
+
+// Typography
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+$font-size-base: 1rem;
+$font-weight-base: 400;
+$line-height-base: 1.5;
+
+// Links
+$link-color: #007bff;
+$link-decoration: none;
+$link-hover-color: #0056b3;
+$link-hover-decoration: underline;
+
+// Spacing
+$spacer: 1rem;
+
+// Grid Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Grid Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+// Grid Columns
+$grid-columns: 12;
+
+// Navbar
+$navbar-padding-y: 0.5rem;
+$navbar-padding-x: 1rem;
+$navbar-brand-padding-y: 0.25rem;
+
+// ...
