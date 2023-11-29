@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="Top-Header">
+        <div className="Nav-Header">
           <a href="#Nosotros">
             <img src="logo.png"></img>
           </a>
@@ -16,8 +16,10 @@ function App() {
             <a href="#Vision">Visión</a>
             <a href="#Contacto">Contacto</a>
           </div>
+          <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+      <div className="">
         <h1>Sobre nosotros</h1>
         <section id="Nosotros">
           <p>
@@ -54,7 +56,7 @@ function App() {
             info@grupoestudiantil.com
           </a>
         </section>
-      </header>
+      </div>
     </div>
   );
 }
