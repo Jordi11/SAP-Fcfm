@@ -1,6 +1,9 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./scss/App.scss";
+import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+
+const email = "sap@uanl.edu.mx";
 
 function App() {
   return (
@@ -15,7 +18,6 @@ function App() {
           <a href="#Vision">Visión</a>
           <a href="#Contacto">Contacto</a>
         </div>
-        <img src={logo} className="App-logo" alt="logo" />
       </div>
       <div className="">
         <h1>Sobre nosotros</h1>
@@ -71,11 +73,179 @@ function App() {
           {/* Aquí puedes agregar imágenes o descripciones de tus colaboradores */}
         </section>
       </div>
-      <div className="Bottom-Bar">
-        <a href="#">Inicio</a>
-        <a href="#">Sobre nosotros</a>
-        <a href="#">Contacto</a>
-      </div>
+      {/* footer */}
+      <footer className="bg-dark" id="tempaltemo_footer">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4 pt-5">
+              <h2 className="h2 text-success border-bottom pb-3 border-light ">
+                <img src="logo.png" className="footer-logo" />
+              </h2>
+              <ul className="list-unstyled text-light footer-link-list">
+                <li>
+                  <i className="fas fa-map-marker-alt fa-fw"></i>
+                  UANL{" "}
+                </li>
+                <li>
+                  <i className="fa fa-phone fa-fw"></i>
+                  <a className="text-decoration-none" href="tel:010-020-0340">
+                    010-020-0340
+                  </a>
+                </li>
+                <li>
+                  <i className="fa fa-envelope fa-fw"></i>
+                  <a className="text-decoration-none" href="${email}">
+                    {email}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-md-4 pt-5">
+              <h2 className="h2 text-light border-bottom pb-3 border-light">
+                Products
+              </h2>
+              <ul className="list-unstyled text-light footer-link-list">
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Luxury
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Sport Wear
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Men's Shoes
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Women's Shoes
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Popular Dress
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Gym Accessories
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Sport Shoes
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-md-4 pt-5">
+              <h2 className="h2 text-light border-bottom pb-3 border-light">
+                Further Info
+              </h2>
+              <ul className="list-unstyled text-light footer-link-list">
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Shop Locations
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row text-light mb-4">
+            <div className="col-12 mb-3">
+              <div className="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div className="">
+              <div className="footer-icons">
+                <span>
+                  <a
+                    className="text-light text-decoration-none"
+                    target="_blank"
+                    href="http://facebook.com/"
+                  >
+                    <FaFacebookF />
+                  </a>
+                </span>
+                <span>
+                  <a
+                    className="text-light text-decoration-none"
+                    target="_blank"
+                    href="https://www.instagram.com/"
+                  >
+                    <FaInstagram />
+                  </a>
+                </span>
+                <span>
+                  <a
+                    className="text-light text-decoration-none"
+                    target="_blank"
+                    href="https://twitter.com/"
+                  >
+                    <BsTwitterX />
+                  </a>
+                </span>
+
+                <span>
+                  <a
+                    className="text-light text-decoration-none"
+                    target="_blank"
+                    href="https://www.linkedin.com/"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-100 bg-black py-3">
+          <div className="container">
+            <div className="row pt-2">
+              <div className="col-12">
+                <p className="text-left text-light">
+                  Copyright &copy; 2023 SAP | Designed by
+                  <a
+                    rel="sponsored"
+                    href=""
+                    target="_blank"
+                    style={{ marginLeft: "5px" }}
+                  >
+                    JorD
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
