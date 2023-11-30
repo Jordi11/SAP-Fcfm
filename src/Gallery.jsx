@@ -1,42 +1,62 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// Gallery.jsx
 
-class Gallery extends React.Component {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 100,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    };
-    return (
-      <div>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+import React, { useState } from "react";
+import "./scss/Gallery.scss";
+
+const Gallery = () => {
+  // Ejemplo de datos de imágenes con texto asociado
+  const images = [
+    { path: "./img/imagen1.jpg", text: "AWS Community Day 2023" },
+    { path: "./img/imagen2.jpg", text: "Texto de la imagen 2" },
+    { path: "./img/imagen3.jpg", text: "CISI 2023" },
+    { path: "./img/imagen4.jpg", text: "Texto de la imagen 4" },
+    { path: "./img/imagen5.jpg", text: "Texto de la imagen 5" },
+    // Agrega más imágenes según sea necesario
+  ];
+
+  // Estado para controlar la visibilidad del texto
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  // Función para manejar el evento onMouseEnter
+  const handleActive = (index) => {
+    setActiveIndex(index);
+  };
+
+  // Función para manejar el evento onMouseLeave
+  const handleInactive = () => {
+    setActiveIndex(null);
+  };
+
+  return (
+    <div className="gallery-container">
+      <h2>Galeria </h2>
+      <div className="row">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="col-md-3"
+            onMouseEnter={() => handleActive(index)}
+            onMouseLeave={handleInactive}
+          >
+            <div className="imag">
+              <img
+                src={image.path}
+                alt={`Imagen ${index + 1}`}
+                className="img-fluid"
+              />
+              <div
+                className={`image-text ${
+                  activeIndex === index ? "active" : ""
+                }`}
+              >
+                {image.text}
+              </div>
+            </div>
           </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
+        ))}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Gallery;

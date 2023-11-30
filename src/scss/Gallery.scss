@@ -1,0 +1,64 @@
+// Gallery.scss
+@import "variables";
+.gallery-container {
+  padding: 20px;
+
+  background-color: $blue;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: $font-size-base;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .col-md-3 {
+    position: relative;
+    width: calc(25% - 30px);
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+
+    .imag {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      display: flex;
+      max-height: 200px;
+      .img-fluid {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s;
+      }
+      .image-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      &:hover {
+        .img-fluid {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
