@@ -2,10 +2,17 @@ import React from "react";
 import "./scss/App.scss";
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-
-const email = "sap@uanl.edu.mx";
+import Gallery from "./Gallery"; // Asegúrate de tener la ruta correcta
 
 function App() {
+  const images = [
+    "1.png",
+    "2.png",
+    "3.png",
+    // Agrega tantas imágenes como desees
+  ];
+  const email = "sap@uanl.edu.mx";
+
   return (
     <div className="App">
       <div className="Nav-Header">
@@ -41,20 +48,9 @@ function App() {
             formación y el desarrollo de profesionales en tecnología.
           </p>
         </section>
-        <section id="Contacto">
-          <h2>Contacto</h2>
-          <p>
-            Si tienes alguna pregunta o sugerencia, no dudes en ponerte en
-            contacto con nosotros.
-          </p>
-          <a
-            className="App-link"
-            href="mailto:info@grupoestudiantil.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            info@grupoestudiantil.com
-          </a>
+        <section id="Contacto" className="pb-3">
+          <h2>Galeria </h2>
+          <Gallery title="Mi Galería" images={images} />
         </section>
         <section id="Proyectos">
           <h2>Proyectos</h2>
@@ -78,18 +74,36 @@ function App() {
         <div className="container">
           <div className="row">
             <div className="col-md-4 pt-5">
-              <h2 className="h2 text-success border-bottom pb-3 border-light ">
-                <img src="logo.png" className="footer-logo" />
+              <h2 className="h2 text-success border-bottom  border-light ">
+                <a href="" style={{ margin: "none" }}>
+                  <img src="logo.png" className="footer-logo" />
+                </a>
               </h2>
               <ul className="list-unstyled text-light footer-link-list">
                 <li>
-                  <i className="fas fa-map-marker-alt fa-fw"></i>
-                  UANL{" "}
+                  <a
+                    className="text-decoration-none"
+                    href="https://www.uanl.mx/"
+                  >
+                    UANL
+                  </a>
+                </li>
+                <li className="Direccion">
+                  Av. Universidad s/n. Ciudad Universitaria San Nicolás de los
+                  Garza, C.P. 66451 Nuevo León, México
                 </li>
                 <li>
                   <i className="fa fa-phone fa-fw"></i>
                   <a className="text-decoration-none" href="tel:010-020-0340">
                     010-020-0340
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-decoration-none"
+                    href="https://www.fcfm.uanl.mx/"
+                  >
+                    FCFM
                   </a>
                 </li>
                 <li>
@@ -103,50 +117,7 @@ function App() {
 
             <div className="col-md-4 pt-5">
               <h2 className="h2 text-light border-bottom pb-3 border-light">
-                Products
-              </h2>
-              <ul className="list-unstyled text-light footer-link-list">
-                <li>
-                  <a className="text-decoration-none" href="#">
-                    Luxury
-                  </a>
-                </li>
-                <li>
-                  <a className="text-decoration-none" href="#">
-                    Sport Wear
-                  </a>
-                </li>
-                <li>
-                  <a className="text-decoration-none" href="#">
-                    Men's Shoes
-                  </a>
-                </li>
-                <li>
-                  <a className="text-decoration-none" href="#">
-                    Women's Shoes
-                  </a>
-                </li>
-                <li>
-                  <a className="text-decoration-none" href="#">
-                    Popular Dress
-                  </a>
-                </li>
-                <li>
-                  <a className="text-decoration-none" href="#">
-                    Gym Accessories
-                  </a>
-                </li>
-                <li>
-                  <a className="text-decoration-none" href="#">
-                    Sport Shoes
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-md-4 pt-5">
-              <h2 className="h2 text-light border-bottom pb-3 border-light">
-                Further Info
+                Utilidades
               </h2>
               <ul className="list-unstyled text-light footer-link-list">
                 <li>
@@ -156,22 +127,27 @@ function App() {
                 </li>
                 <li>
                   <a className="text-decoration-none" href="#">
-                    About Us
+                    Acerca de nosotros
                   </a>
                 </li>
                 <li>
                   <a className="text-decoration-none" href="#">
-                    Shop Locations
+                    Miembros
                   </a>
                 </li>
                 <li>
                   <a className="text-decoration-none" href="#">
-                    FAQs
+                    Eventos
                   </a>
                 </li>
                 <li>
                   <a className="text-decoration-none" href="#">
-                    Contact
+                    Proyectos
+                  </a>
+                </li>
+                <li>
+                  <a className="text-decoration-none" href="#">
+                    Preguntas Frecuentes
                   </a>
                 </li>
               </ul>

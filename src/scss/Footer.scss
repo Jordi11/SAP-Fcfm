@@ -476,6 +476,9 @@ progress {
 .list-unstyled {
   padding-left: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .list-inline {
   padding-left: 0;
@@ -587,6 +590,7 @@ progress {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) / -2);
@@ -9320,8 +9324,11 @@ fieldset:disabled .btn {
   width: auto;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   span {
     padding: 5px;
   }
+}
+.Direccion {
+  width: 80%;
 }
